@@ -1,0 +1,21 @@
+{
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "webpack-dev-server --port 9190 --hot --mode development --config webpack.dev.config.js",
+    "build": "rmdir /s /q build && webpack --mode production",
+    "build-win32": "rmdir /s /q build && webpack --optimize-minimize --colors --progress && rmdir /s /q build-server && babel ./src/server.js --out-dir build-server --ignore node_modules"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
